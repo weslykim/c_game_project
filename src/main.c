@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+int display_menu();
+void display_tetris();
 int main()
 {
     int menu = 1;
