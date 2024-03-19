@@ -1,18 +1,22 @@
 #include "display_tetris.h"
 void display_tetris()
 {
+    int i, j;
     system("clear");
     printf("Next Block\n");
-    for(int i = 0; i < 4; i++) {
-        for(int j =0; j < 4; j++) {
-            if(block[i][j] == 0) {
-            printf("o ");}
-            else {
-            printf("* ");    
-            }
+    for(int i = 0; i < 4; i++) 
+    {
+        printf("\n");
+        for(int j =0; j < 4; j++)
+         {
+            if(block[0][i][j] == 1) {
+            printf("* ");}
+            else if (block[0][i][j] == 0){
+            printf("0 ");    
+         }
                       
         } 
-        printf("\n");
+        
     }
     printf("\n\n");
     printf("tetris table\n");
@@ -24,9 +28,9 @@ void display_tetris()
                 else if ((i == 20) && (j > 1 || j < 9)) {
                     printf("-");}
             else if (tetris_table[j][i] == 0) {
-                printf("o");}
+                printf("* ");}
             else if (tetris_table[j][i] == 1) {
-                printf("*");}
+                printf("o ");}
         }
         printf("\n");   
     }
