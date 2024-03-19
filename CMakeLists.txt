@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 project(tetris_kjs)
 
-add_executable(tetris_kjs src/main.c src/display_menu.c src/display_tetris.c)
+file(GLOB SRC_FILES "src/*.c")
+
+add_executable(tetris_kjs ${SRC_FILES})
 target_include_directories(tetris_kjs PUBLIC include)
 
 install(TARGETS tetris_kjs DESTINATION /usr/local/bin)
