@@ -5,7 +5,9 @@
 *   @date 2024 - 03 -20
 *   @details 이 게임은 signal을 사용해서 1/60초 마다 화면을 갱신 하는것을 이용한 프로그램입니다.
 */
-
+/**
+    @brief 요 아래가 테트리스 게임을 만들때 필요한 헤더파일들을 표시했습니다.
+*/
 #include <stdio.h>
 #include <signal.h>
 #include <sys/time.h>
@@ -13,6 +15,9 @@
 
 #define GAME_START 0
 #define GAME_END 1
+/**
+    @brief 요 아래가 테트리스 게임을 만들때 필요한 전역변수들을 표시했습니다.
+*/
 int display_menu();
 void display_tetris();
 int game;
@@ -49,7 +54,9 @@ int game_start()
     }
     game = GAME_END;
 }
-
+/**
+    @brief 메인함수중에 메뉴를 만들고 표시하는 함수를 만들었습니다.
+*/
 int main()
 {
     int menu = 1;
@@ -75,7 +82,9 @@ int main()
     
     return 0;
 }
-
+/**
+    @brief 테트리스 게임을 할때 필요한 테이블을 초기화하고 구성하는 함수를 만들었습니다.
+*/
 int init_tetris_table()
 {
     int i, j;
