@@ -15,9 +15,7 @@
 
 #define GAME_START 0
 #define GAME_END 1
-/**
-    @brief 요 아래가 테트리스 게임을 만들때 필요한 전역변수들을 표시했습니다.
-*/
+
 int display_menu();
 void display_tetris();
 int game;
